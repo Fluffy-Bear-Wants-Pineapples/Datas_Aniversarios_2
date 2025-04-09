@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cor-de-fundo: #bdb2ff;
+    --dourado: #e49c47;
+    --rosa: #df7a7a;
+    --roxo: #312b52;
+    --branco: #ffffff;
+    --botao-ativo: #554e84;
+    --botao-inativo: #252047;
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+body {
+    background-image: url("img/Fundo.png");
+    color: var(--roxo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    font-family: 'Satisfy', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+}
+
+.titulo-principal .span-1 {
+    color: var(--dourado);
+}
+
+.titulo-principal .span-2 {
+    color: var(--rosa);
+}
+
+
+.botao {
+    font-family: 'Satisfy', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--dourado);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 25px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 1px solid var(--roxo);
+    border-right: 1px solid var(--roxo);
+    border-top: none;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.botoes {
+    display: block;
+}
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--rosa);
+}
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo-titulo-principal {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito {
+  padding: 0 16px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.contador-digito-numero {
+    color: var(--botao-inativo);
+  font-size: 50px;
+  margin: 0;
+}
+
+.contador-digito-texto {
+  font-size: 20px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
